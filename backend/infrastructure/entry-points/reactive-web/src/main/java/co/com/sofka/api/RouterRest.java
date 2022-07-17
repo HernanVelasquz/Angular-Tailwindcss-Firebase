@@ -13,9 +13,9 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 public class RouterRest {
 @Bean
 public RouterFunction<ServerResponse> routerFunction(Handler handler) {
-    return route(POST("/api/usecase/crearheroe"), handler::createHeroUseCase)
-            .and(route(GET("/api/usecase"), handler::listAllUseCase))
-            .and(route(GET("/api/usecase/{id}"), handler::listForIdUseCase))
+    return route(POST("/api/usecase/crearheroe"), handler::createHeroUseCase)// Listo
+            .and(route(GET("/api/usecase"), handler::listAllUseCase)) // Listo
+            .and(route(GET("/api/usecase/{id}"), handler::listForIdUseCase)) // Listo
             .and(route(PUT("/api/usecase/{id}"), handler::updateForHero))
             .and(route(DELETE("/api/usecase/{id}"), handler::deleteHero));
 
