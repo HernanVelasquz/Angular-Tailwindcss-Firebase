@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/singIn', pathMatch: 'full' },
   { path: 'singIn', component: AppComponent },
   { path: 'register', component: ComponetRegistroComponent },
-  { path: 'sessionStarted', component: ComponetSessionStartedComponent }
+  { path: 'sessionStarted', component: ComponetSessionStartedComponent },
+  { path: '**', redirectTo: '/' },
 ]
 @NgModule({
   declarations: [],
